@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>История 6 класс — Тесты</title>
+    <!-- Подключаем стили -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>История 6 класс</h1>
+        <button class="theme-toggle" id="theme-btn">🌙 Темная</button>
+    </header>
+
+    <!-- ПАНЕЛЬ КАСТОМИЗАЦИИ ГРАДИЕНТОВ -->
+    <div class="settings-panel">
+        <div class="picker-group">
+            <span>Акцент:</span>
+            <input type="color" id="accentPicker" class="color-picker" value="#007aff">
+        </div>
+        <div class="picker-group">
+            <span>Фон (Топ):</span>
+            <input type="color" id="bg1Picker" class="color-picker" value="#e0eafc">
+        </div>
+        <div class="picker-group">
+            <span>Фон (Низ):</span>
+            <input type="color" id="bg2Picker" class="color-picker" value="#cfdef3">
+        </div>
+    </div>
+
+    <main class="main-container">
+        <!-- ЭКРАН ВЫБОРА ТЕСТА -->
+        <div id="menu-screen">
+            <h2 class="menu-heading">Выбери тему для подготовки:</h2>
+            <div class="menu-list">
+                <button class="menu-btn" onclick="startTest(0)"><span>🏰 1. Франки</span> <span>➔</span></button>
+                <button class="menu-btn" onclick="startTest(1)"><span>🏛️ 2. Византия</span> <span>➔</span></button>
+                <button class="menu-btn" onclick="startTest(2)"><span>🛡️ 3. Древняя Русь</span> <span>➔</span></button>
+            </div>
+        </div>
+
+        <!-- ЭКРАН С ТЕСТОМ -->
+        <div id="test-screen" class="hidden">
+            <div class="progress-bar-container"><div class="progress-fill" id="progress"></div></div>
+            <div id="question-area"></div>
+            <button id="next-btn" class="action-btn" onclick="handleNext()">Проверить</button>
+        </div>
+
+        <!-- ЭКРАН РЕЗУЛЬТАТОВ -->
+        <div id="result-screen" class="hidden" style="text-align: center;">
+            <h2>Тест завершен!</h2>
+            <div class="score-circle" id="score-view">5</div>
+            <p id="result-text"></p>
+            <button class="action-btn" onclick="backToMenu()">Вернуться в меню</button>
+        </div>
+    </main>
+
+    <!-- Подключаем логику скриптов -->
+    <script src="data.js"></script>
+    <script src="theme.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
