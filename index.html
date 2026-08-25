@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Скачать приложение по истории 6 класса</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        .installer-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            padding: 40px;
+            border-radius: 24px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 500px;
+            width: 100%;
+        }
+        h1 { font-size: 24px; margin-bottom: 10px; color: #1c1c1e; }
+        p { font-size: 16px; color: #3a3a3c; margin-bottom: 30px; line-height: 1.5; }
+        .download-btn {
+            background: #007aff;
+            color: white;
+            border: none;
+            padding: 16px 32px;
+            border-radius: 14px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0, 122, 255, 0.4);
+            transition: transform 0.2s, background 0.2s;
+            width: 100%;
+        }
+        .download-btn:hover {
+            background: #0062cc;
+            transform: translateY(-2px);
+        }
+        .download-btn:active {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="installer-card">
+        <h1>📲 Приложение готово к скачиванию</h1>
+        <p>Внутрь встроены все 3 теста, iOS Гламорфизм, Drag-and-Drop, а также <strong>настраиваемая кастомная тема</strong> (выбор цвета акцента и градиента фона прямо в приложении).</p>
+        <button class="download-btn" onclick="downloadApp()">Нажми, чтобы скачать .html</button>
+    </div>
+
+    <script>
+        function downloadApp() {
+            const appCode = `<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>История 6 класс — Настраиваемые Тесты</title>
+    <style>
+        :root[data-theme="light"] {
+            --accent-color: #007aff;
+            --bg-color-1: #e0eafc;
+            --bg-color-2: #cfdef3;
+            --glass-bg: rgba(255, 255, 255, 0.4);
+            --glass-border: rgba(255, 255, 255, 0.6);
+            --text-main: #1c1c1e;
+            --text-muted: #3a3a3c;
+            --accent-success: #34c759;
+            --accent-error: #ff3b30;
+            --shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.08);
+            --card-active: rgba(255, 255, 255, 0.7);
+        }
+
+        :root[data-theme="dark"] {
+            --accent-color: #0a84ff;
+            --bg-color-1: #0f172a;
+            --bg-color-2: #1e1b4b;
+            --glass-bg: rgba(30, 30, 45, 0.45);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --text-main: #f5f5f7;
+            --text-muted: #aeaeb2;
+            --accent-success: #30d158;
+            --accent-error: #ff453a;
+            --shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            --card-active: rgba(255, 255, 255, 0.15);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            transition: background 0.3s, color 0.3s, border-color 0.3s;
+        }
+
+        body {
+            background: linear-gradient(135deg, var(--bg-color-1), var(--bg-color-2));
+            background-attachment: fixed;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            color: var(--text-main);
+        }
+
+        header {
+            width: 100%;
+            max-width: 600px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+        /* НАСТРОЙКИ ЦВЕТА И ГРАДИЕНТА */
+        .settings-panel {
+            width: 100%;
+            max-width: 600px;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 16px;
+            margin-bottom: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: var(--shadow);
+        }
+
+        .picker-group {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .color-picker {
+            border: none;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            cursor: pointer;
+            background: none;
+        }
+
+        .theme-toggle {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            color: var(--text-main);
+            font-weight: 600;
+        }
+
+        .main-container {
+            width: 100%;
+            max-width: 600px;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 24px;
+            padding: 24px;
+            box-shadow: var(--shadow);
+        }
+
+        .menu-list { display: flex; flex-direction: column; gap: 14px; margin-top: 16px; }
+        
+        .menu-btn {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            padding: 18px;
+            border-radius: 16px;
+            text-align: left;
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-main);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+        }
+        .menu-btn:hover { background: var(--card-active); }
+
+        .hidden { display: none !important; }
+
+        .progress-bar-container {
+            width: 100%;
+            height: 6px;
+            background: rgba(0,0,0,0.08);
+            border-radius: 3px;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+        .progress-fill { height: 100%; width: 0%; background: var(--accent-color); transition: width 0.3s; }
+
+        .question-title { font-size: 18px; margin-bottom: 20px; font-weight: 600; }
+
+        /* КВИЗ */
+        .options-container { display: flex; flex-direction: column; gap: 12px; }
+        .option-btn {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            padding: 14px;
+            border-radius: 12px;
+            cursor: pointer;
+            text-align: left;
+            font-size: 15px;
+            color: var(--text-main);
+        }
+        .option-btn:hover { background: var(--card-active); }
+
+        /* ИНПУТ */
+        .text-input {
+            width: 100%;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            padding: 14px;
+            border-radius: 12px;
+            font-size: 16px;
+            color: var(--text-main);
+            outline: none;
+        }
+
+        /* DRAG AND DROP */
+        .drag-container { display: flex; flex-direction: column; gap: 12px; }
+        .drag-row { display: flex; align-items: center; gap: 12px; }
+        .drag-pic { width: 60px; height: 60px; background: rgba(255,255,255,0.2); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; }
+        .drop-zone { flex-grow: 1; min-height: 50px; background: rgba(0,0,0,0.05); border: 2px dashed var(--glass-border); border-radius: 12px; padding: 10px; display: flex; align-items: center; }
+        .drag-item { background: var(--glass-bg); border: 1px solid var(--glass-border); padding: 10px; border-radius: 8px; cursor: grab; text-align: center; width: 100%; font-weight: 500; }
+        .drag-pool { margin-top: 16px; padding: 12px; background: rgba(0,0,0,0.02); border-radius: 14px; display: flex; flex-wrap: wrap; gap: 10px; min-height: 50px; }
+
+        .action-btn {
+            width: 100%;
+            background: var(--accent-color);
+            color: #fff;
+            border: none;
+            padding: 14px;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .correct { background: var(--accent-success) !important; color: white !important; }
+        .incorrect { background: var(--accent-error) !important; color: white !important; }
+
+        .score-circle { width: 90px; height: 90px; border-radius: 50%; color: white; font-size: 32px; font-weight: 700; display: flex; align-items: center; justify-content: center; margin: 20px auto; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>История 6 класс</h1>
+        <button class="theme-toggle" id="theme-btn">🌙 Темная</button>
+    </header>
+
+    <!-- НАСТРАИВАЕМЫЕ ГРАДИЕНТЫ И ЦВЕТА -->
+    <div class="settings-panel">
+        <div class="picker-group">
+            <span>Цвет акцента:</span>
+            <input type="color" id="accentPicker" class="color-picker" value="#007aff" onchange="updateColors()">
+        </div>
